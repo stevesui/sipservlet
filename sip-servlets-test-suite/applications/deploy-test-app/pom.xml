@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.mobicents.servlet.sip.testsuite.applications</groupId>
+		<artifactId>sip-servlets-test-suite-applications</artifactId>
+		<version>1.7.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>click-to-call-servlet</artifactId>
+	<packaging>war</packaging>
+	<name>Click To Call</name>
+	<url>http://www.mobicents.org/click2call.html</url>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>annotations-api</artifactId>
+			<version>${tomcat.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warSourceDirectory>
+						${basedir}/src/main/sipapp
+					</warSourceDirectory>
+				</configuration>
+			</plugin>
+		</plugins>		
+	</build>
+</project>

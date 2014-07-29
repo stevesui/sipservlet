@@ -1,0 +1,153 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.mobicents.servlet.sip.testsuite</groupId>
+		<artifactId>sip-servlets-test-suite-parent</artifactId>
+		<version>3.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>org.mobicents.servlet.sip.testsuite.applications</groupId>
+	<artifactId>sip-servlets-test-suite-applications</artifactId>
+	<packaging>pom</packaging>
+	<name>Sip Servlets Test Suite Applications Parent Pom</name>
+	<modules>
+		<module>annotated-servlet</module>
+		<module>simple-sip-servlet</module>
+		<module>shootme-sip-servlet-auth</module>
+		<module>shootist-sip-servlet</module>
+		<module>appkey-sip-servlet</module>
+		<module>shootist-sip-servlet-auth</module>
+		<module>proxy-sip-servlet</module>		
+		<module>b2bua-sip-servlet</module>		
+		<module>call-blocking-servlet</module>
+		<module>call-forwarding-servlet</module>
+		<module>call-forwarding-b2bua-servlet</module>
+		<module>speed-dial-servlet</module>
+		<module>location-service-servlet</module>
+		<module>click-to-call-servlet</module>
+		<module>listeners-sip-servlet</module>
+		<module>timers-sip-servlet</module>
+		<module>session-state-uas</module>
+		<module>session-state-uac</module>		
+		<module>servlet-mapping-servlet</module>
+		<module>notifier-servlet</module>
+		<module>subscriber-servlet</module>
+		<module>chatroom-sip-servlet</module>
+		<module>handler-sip-servlet</module>
+		<module>dispatcher-sip-servlet</module>				
+		<module>update-sip-servlet</module>
+		<module>refer-sip-servlet</module>
+		<module>publish-sip-servlet</module>
+		<module>join-sip-servlet</module>
+		<module>replaces-sip-servlet</module>
+		<module>no-app-name-servlet</module>
+		<module>no-main-servlet-app</module>
+		<module>same-instance-servlet</module>
+		<module>distributable-servlet</module>
+	</modules>
+	<dependencies>
+		<!-- test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- logging dependency -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging-api</artifactId>
+			<version>${commons-logging.version}</version>
+			<scope>provided</scope>
+		</dependency>	
+
+		<!-- JAIN-SIP dependency for the shootist -->
+		<dependency>
+			<groupId>javax.sip</groupId>
+			<artifactId>jain-sip-api</artifactId>
+			<version>${jain-sip-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.sip</groupId>
+			<artifactId>jain-sip-ri</artifactId>
+			<version>${jain-sip-ri.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- j2ee dependencies -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mobicents.servlet.sip</groupId>
+			<artifactId>sip-servlets-spec</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mobicents.servlet.sip</groupId>
+			<artifactId>sip-servlets-impl</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mobicents.servlet.sip</groupId>
+			<artifactId>sip-servlets-annotations</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mobicents.servlet.sip</groupId>
+			<artifactId>sip-servlets-client</artifactId>
+			<version>3.0.0-SNAPSHOT</version>			
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-annotations-api</artifactId>
+			<version>${tomcat-7.version}</version>
+			<scope>provided</scope>
+		</dependency>
+				
+		<!-- javax.mail deps for multipart support -->
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+			<scope>provided</scope>
+		</dependency>
+		
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>			
+		</plugins>
+	</build>
+</project>

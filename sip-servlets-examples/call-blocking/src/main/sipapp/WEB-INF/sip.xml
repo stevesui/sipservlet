@@ -1,0 +1,13 @@
+<sip-app>
+        <app-name>org.mobicents.servlet.sip.example.CallBlockingApplication</app-name>
+       
+        <servlet>
+                <servlet-name>CallBlockingSipServlet</servlet-name>
+                <servlet-class>org.mobicents.servlet.sip.example.CallBlockingSipServlet</servlet-class>
+                <load-on-startup>1</load-on-startup>
+        </servlet>
+        
+        <listener>
+        	<listener-class>org.mobicents.servlet.sip.example.CallBlockingSipServlet</listener-class>
+        </listener>
+</sip-app>	

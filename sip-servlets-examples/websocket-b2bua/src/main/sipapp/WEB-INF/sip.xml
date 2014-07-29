@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sip-app>
+	<app-name>WebsocketSample</app-name>
+	<display-name>WebsocketSample</display-name>
+	<description>WebsocketSample</description>
+	
+	<servlet-selection>
+		<main-servlet>
+			WebSocketB2BUASipServlet
+		</main-servlet>
+	</servlet-selection>
+
+	<servlet>
+		<servlet-name>WebSocketB2BUASipServlet</servlet-name>
+		<display-name>WebSocketB2BUASipServlet</display-name>
+		<description>WebSocket B2BUA SIP servlet</description>
+		<servlet-class>
+			org.mobicents.servlet.sip.example.WebSocketB2BUASipServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+    
+    <listener>
+		<listener-class>
+			org.mobicents.servlet.sip.example.WebSocketB2BUASipServlet
+		</listener-class>
+	</listener>
+</sip-app>

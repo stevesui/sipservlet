@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sip-app>
+	<app-name>org.mobicents.servlet.sip.example.SimpleApplication</app-name>
+	<display-name>Simple Sip Servlet</display-name>
+	<description>Simple Sip Servlet</description>
+	
+	<servlet-selection>
+		<main-servlet>
+			SimpleSipServlet
+		</main-servlet>
+	</servlet-selection>
+
+	<servlet>
+		<servlet-name>SimpleSipServlet</servlet-name>
+		<display-name>SimpleSipServlet</display-name>
+		<description>Simple SIP servlet</description>
+		<servlet-class>
+			org.mobicents.servlet.sip.example.SimpleSipServlet
+		</servlet-class>
+		<init-param>
+           <param-name>rabbitmq_conn_url</param-name>
+           <param-value>amqp://sip:sip@asgldlloadtest03:5672</param-value>
+        </init-param>
+		<init-param>
+           <param-name>rabbitmq_pool_max_active</param-name>
+           <param-value>5</param-value>
+       </init-param>      
+       <init-param>
+           <param-name>rabbitmq_pool_max_idle</param-name>
+           <param-value>-1</param-value>
+       </init-param>
+       <init-param>
+           <param-name>rabbitmq_pool_min_idle</param-name>
+           <param-value>5</param-value>
+       </init-param>
+       <init-param>
+           <param-name>rabbitmq_pool_time_between_eviction</param-name>
+           <param-value>-1</param-value>
+       </init-param>
+       <init-param>
+           <param-name>rabbitmq_pool_idle_time_before_eviction</param-name>
+           <param-value>50000</param-value>      
+       </init-param>
+       <init-param>
+      		<param-name>exchange_name</param-name>
+      		<param-value>encore_topic</param-value>
+    	</init-param>
+ 		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<context-param>
+      <param-name>bye.delay</param-name>
+      <param-value>60000</param-value>
+    </context-param>
+    
+   
+    <listener>
+		<listener-class>
+			org.mobicents.servlet.sip.example.SimpleSipServlet
+		</listener-class>
+	</listener>
+</sip-app>

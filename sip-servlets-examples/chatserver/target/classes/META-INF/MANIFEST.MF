@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Export-Package: org.mobicents.servlet.sip.example;uses:="javax.servlet
+ ,javax.naming,org.apache.log4j,javax.servlet.sip"
+Implementation-Title: org.mobicents.servlet.sip.examples:chatroom-serv
+ let
+Implementation-Version: 3.0.0-SNAPSHOT
+Built-By: stevesui
+Tool: Bnd-1.15.0
+Bundle-Name: Chatroom Sip Servlet Example
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.mobicents.org
+Implementation-Vendor-Id: TeleStax, Inc.
+Build-Jdk: 1.6.0_33
+Bundle-Version: 3.0.0.SNAPSHOT
+Bnd-LastModified: 1382576307232
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.gnu.org/licenses/lgpl.html
+Bundle-Description: Mobicents SIP Servlets
+Import-Package: javax.naming,javax.servlet,javax.servlet.sip,org.apach
+ e.log4j;version="[1.2,2)"
+Bundle-SymbolicName: org.mobicents.servlet.sip.examples.chatroom-servl
+ et
+

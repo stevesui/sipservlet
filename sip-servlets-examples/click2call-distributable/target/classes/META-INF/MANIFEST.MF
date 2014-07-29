@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Export-Package: org.mobicents.servlet.sip.example;uses:="org.apache.co
+ mmons.logging,javax.servlet.sip,javax.servlet,javax.annotation,javax.
+ servlet.http,javax.servlet.sip.annotation,javax.naming,org.apache.log
+ 4j"
+Implementation-Title: org.mobicents.servlet.sip.examples:click2call-di
+ stributable
+Implementation-Version: 3.0.0-SNAPSHOT
+Built-By: stevesui
+Tool: Bnd-1.15.0
+Bundle-Name: Distributable Click2Call Converged Sip Servlet Example
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.mobicents.org
+Implementation-Vendor-Id: TeleStax, Inc.
+Build-Jdk: 1.6.0_33
+Bundle-Version: 3.0.0.SNAPSHOT
+Bnd-LastModified: 1382576307845
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.gnu.org/licenses/lgpl.html
+Bundle-Description: Mobicents SIP Servlets
+Import-Package: javax.annotation,javax.naming,javax.servlet,javax.serv
+ let.http,javax.servlet.sip,javax.servlet.sip.annotation,org.apache.co
+ mmons.logging,org.apache.log4j;version="[1.2,2)"
+Bundle-SymbolicName: org.mobicents.servlet.sip.examples.click2call-dis
+ tributable
+

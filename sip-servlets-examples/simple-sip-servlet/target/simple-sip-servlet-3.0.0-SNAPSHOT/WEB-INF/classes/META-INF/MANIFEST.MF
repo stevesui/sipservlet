@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Export-Package: org.mobicents.servlet.sip.example;uses:="javax.servlet
+ ,org.apache.log4j,org.apache.commons.pool.impl,com.rabbitmq.client,or
+ g.apache.commons.pool,org.mobicents.servlet.sip.example.utils,javax.s
+ ervlet.sip",org.mobicents.servlet.sip.example.utils;uses:="org.apache
+ .log4j,com.rabbitmq.client,org.apache.commons.pool"
+Implementation-Title: org.mobicents.servlet.sip.examples:simple-sip-se
+ rvlet
+Implementation-Version: 3.0.0-SNAPSHOT
+Built-By: stevesui
+Tool: Bnd-1.15.0
+Bundle-Name: Simple Sip Servlet Example
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.mobicents.org
+Implementation-Vendor-Id: TeleStax, Inc.
+Build-Jdk: 1.6.0_33
+Bundle-Version: 3.0.0.SNAPSHOT
+Bnd-LastModified: 1384971367734
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.gnu.org/licenses/lgpl.html
+Bundle-Description: Mobicents SIP Servlets
+Import-Package: com.rabbitmq.client;version="[3.1,4)",javax.servlet,ja
+ vax.servlet.sip,org.apache.commons.pool;version="[1.6,2)",org.apache.
+ commons.pool.impl;version="[1.6,2)",org.apache.log4j;version="[1.2,2)
+ "
+Bundle-SymbolicName: org.mobicents.servlet.sip.examples.simple-sip-ser
+ vlet
+

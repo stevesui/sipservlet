@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Export-Package: org.mobicents.servlet.sip.alerting;uses:="javax.servle
+ t,org.apache.log4j,javax.servlet.http,javax.naming,javax.annotation,j
+ avax.media.mscontrol,javax.media.mscontrol.join,javax.servlet.sip,jav
+ ax.media.mscontrol.networkconnection,org.mobicents.servlet.sip.alerti
+ ng.util,javax.media.mscontrol.mediagroup.signals,javax.media.mscontro
+ l.mediagroup",org.mobicents.servlet.sip.alerting.util;uses:="org.apac
+ he.log4j,javax.media.mscontrol,javax.media.mscontrol.mediagroup.signa
+ ls,javax.servlet,org.mobicents.javax.media.mscontrol.spi,javax.media.
+ mscontrol.spi,javax.media.mscontrol.resource,javax.servlet.sip,javax.
+ media.mscontrol.mediagroup,javax.media.mscontrol.networkconnection"
+Implementation-Title: org.mobicents.servlet.sip.examples:alerting-app
+Implementation-Version: 3.0.0-SNAPSHOT
+Built-By: stevesui
+Tool: Bnd-1.15.0
+Bundle-Name: Alerting Application
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.mobicents.org
+Implementation-Vendor-Id: TeleStax, Inc.
+Build-Jdk: 1.6.0_33
+Bundle-Version: 3.0.0.SNAPSHOT
+Bnd-LastModified: 1382576277621
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.gnu.org/licenses/lgpl.html
+Bundle-Description: Mobicents SIP Servlets
+Import-Package: javax.annotation,javax.media.mscontrol,javax.media.msc
+ ontrol.join,javax.media.mscontrol.mediagroup,javax.media.mscontrol.me
+ diagroup.signals,javax.media.mscontrol.networkconnection,javax.media.
+ mscontrol.resource,javax.media.mscontrol.spi,javax.naming,javax.servl
+ et,javax.servlet.http,javax.servlet.sip,org.apache.log4j;version="[1.
+ 2,2)",org.mobicents.javax.media.mscontrol.spi
+Bundle-SymbolicName: org.mobicents.servlet.sip.examples.alerting-app
+

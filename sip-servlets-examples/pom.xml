@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.mobicents.servlet.sip</groupId>
+		<artifactId>sip-servlets-bootstrap</artifactId>
+		<version>3.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<groupId>org.mobicents.servlet.sip.examples</groupId>
+	<artifactId>sip-servlets-examples-parent</artifactId>
+	<version>3.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Mobicents Sip Servlet Examples</name>
+	<url>http://www.mobicents.org/examples.html</url>
+	<modules>
+		<module>alerting-app</module>
+		<module>call-blocking</module>
+		<module>call-forwarding</module>
+		<module>call-forwarding-distributable</module>
+		<module>chatserver</module>
+		<module>click2call-distributable</module>
+		<module>click-to-call</module>
+		<module>click-to-call-servlet3</module>
+		<module>conference-demo-jsr309</module>
+		<module>custom-call-forwarding-distributable</module>
+		<!--module>diameter-event-charging</module>
+		<module>diameter-openims</module>
+		<module>diameter-ro-rf</module>
+		<module>facebook-c2c</module>
+		<module>jslee-sips-interop</module-->
+		<module>location-service</module>
+		<module>location-service-distributable</module>
+		<module>media-jsr309-servlet</module>
+		<!--module>pure-jruby-telco</module>
+		<module>presence-client-example</module-->
+		<module>shootist-sip-servlet</module>
+		<module>shootist-sip-servlet-distributable</module>
+		<!--module>shopping-demo-jsr309</module-->
+		<module>simple-sip-servlet</module>
+		<module>simple-sip-servlet-distributable</module>
+		<module>speed-dial</module>
+		<module>uac-register</module>
+		<module>websocket-b2bua</module>
+	</modules>
+
+	<properties>
+		<!-- MOBICENTS MEDIA SERVER VERSIONS -->
+		<mms.version>1.0.3.GA</mms.version>
+		<jsr309.version>2.0.0.BETA3</jsr309.version>
+		<jsr309.mscontrol.version>0.3</jsr309.mscontrol.version>
+        	<war.plugin.version>2.1-beta-1</war.plugin.version>
+	</properties>
+
+	<dependencies>
+		<!-- test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- logging dependency -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging-api</artifactId>
+			<version>${commons-logging.version}</version>
+			<scope>provided</scope>
+		</dependency>	
+
+		<!-- j2ee dependencies -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mobicents.servlet.sip</groupId>
+			<artifactId>sip-servlets-spec</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>		
+		<dependency>
+			<groupId>org.mobicents.servlet.sip</groupId>
+			<artifactId>sip-servlets-client</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>	
+	</dependencies>	
+
+	<!-- repositories -->
+	<repositories>
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			  <id>mobicents-public-repository-group</id>
+			  <name>Mobicens Public Maven Repository Group</name>
+			  <url>https://oss.sonatype.org/content/groups/public</url>
+			  <layout>default</layout>
+			  <releases>
+			    <enabled>true</enabled>
+			    <updatePolicy>never</updatePolicy>
+			  </releases>
+			  <snapshots>
+			    <enabled>true</enabled>
+			    <updatePolicy>never</updatePolicy>
+			  </snapshots>
+		</repository>
+		<repository>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Maven Repository Group</name>
+			<url>https://repository.jboss.org/nexus/content/groups/public/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>

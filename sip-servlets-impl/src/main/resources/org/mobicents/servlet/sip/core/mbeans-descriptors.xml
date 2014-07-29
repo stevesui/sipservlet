@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<mbeans-descriptors>
+
+	<!--mbean name="SipApplicationDispatcher"
+		description="Sip Application Dispatcher Component" domain="Catalina"
+		group="SipApplicationDispatcher"
+		type="org.mobicents.servlet.sip.core.SipApplicationDispatcherImpl">
+
+		<attribute name="managedResource"
+			description="The managed resource this MBean is associated with"
+			type="java.lang.Object"
+			writeable="false" />
+			
+		<attribute name="concurrencyControlMode"
+			description="Concurrent control mode specifies if requests should be executed sequentially"
+			type="org.mobicents.servlet.sip.annotation.ConcurrencyControlMode" 
+			writeable="false"/>
+			
+		<attribute name="congestionControlPolicy"
+			description="Congestion control policy specifies if what should be done on server congestion"
+			type="org.mobicents.javax.servlet.CongestionControlPolicy" 
+			writeable="false"/>
+			
+		<attribute name="congestionControlCheckingInterval"
+			description="Congestion control interval specifies at which interval (in millisecs) runs the statistics for congestion control"
+			type="long" />
+			
+		<attribute name="queueSize"
+			description="Maximum number of pending messages allowed to wait in a queue to be executed"
+			type="int" />
+			
+		<attribute name="backToNormalQueueSize"
+			description="if the queue size drops below this threshold, the container starts processing messages again"
+			type="int" />
+			
+		<attribute name="baseTimerInterval"
+			description="JAIN SIP Timer Interval"
+			type="int" />
+			
+		<attribute name="t2Interval"
+			description="JAIN SIP Timer T2 Interval"
+			type="int" />
+			
+		<attribute name="t4Interval"
+			description="JAIN SIP Timer T4 Interval"
+			type="int" />
+			
+			<attribute name="timerDInterval"
+			description="JAIN SIP Timer D Interval"
+			type="int" />
+			
+		<attribute name="memoryThreshold"
+			description="Percentage of memory to be used by the container before applying the congestion control policy"
+			type="int" />
+			
+		<attribute name="backToNormalMemoryThreshold"
+			description="if the Percentage of memory be used by the container drops below this threshold, the container starts processing messages again"
+			type="int" />
+			
+		<attribute name="requestsProcessed"
+			description="number of requests processed by the sip application dispatcher"
+			type="long"
+			writeable="false" />
+			
+		<attribute name="responsesProcessed"
+			description="number of responses processed by the sip application dispatcher"
+			type="long"
+			writeable="false" />
+			
+		<attribute name="requestsProcessedByMethod"
+			description="number of requests processed by method by the sip application dispatcher"
+			type="java.util.Map"
+			writeable="false" />
+			
+		<attribute name="responsesProcessedByStatusCode"
+			description="number of responses processed by status code by the sip application dispatcher"
+			type="java.util.Map"
+			writeable="false" />
+			
+		<attribute name="numberOfMessagesInQueue"
+			description="number of pending messages in all queues for all concurrency control modes."
+			type="int"
+			writeable="false" />
+			
+		<attribute name="gatherStatistics"
+			description="whether or not gather usage statistics"
+			type="boolean" />
+			
+		<attribute name="percentageOfMemoryUsed"
+			description="Percentage of memory to be used by the container before applying the congestion control policy."
+			type="int"
+			writeable="false" />
+			
+		<attribute name="version"
+			description="Full release version string"
+			type="java.lang.String"
+			writeable="false" />
+
+		<operation name="findInstalledSipApplications"
+			description="Enumerate applications"
+			impact="ACTION" returnType="[Ljava.lang.String;">
+		</operation>
+		
+		<operation name="retrieveApplicationRouterConfiguration"
+			description="get router configuration"
+			impact="ACTION" returnType="java.lang.Object">
+		</operation>
+		
+		<operation name="updateApplicationRouterConfiguration"
+			description="set router configuration"
+			impact="ACTION" returnType="void">
+			<parameter name="configuration"
+				description="the configuration (AR specific)"
+				type="java.lang.Object" />
+		</operation>
+		
+		<operation name="retrieveApplicationRouterConfigurationString"
+			description="get router configuration remotely ith serialization of string"
+			impact="ACTION" returnType="java.io.Serializable">
+		</operation>
+		
+		<operation name="updateApplicationRouterConfiguration"
+			description="set router configuration remotely"
+			impact="ACTION" returnType="void">
+			<parameter name="serializable configuration"
+				description="the configuration (AR specific)"
+				type="java.io.Serializable" />
+		</operation>
+		
+		<operation name="setConcurrencyControlModeByName"
+			description="set concurrency control mode by the string value of the mode, this is needed because you can't set Enum value types from the JMX console"
+			impact="ACTION" returnType="void">
+			<parameter name="concurrencyControlMode"
+				description="the concurrency mode, must be one of the following - None, SipSession or SipApplicationSession"
+				type="java.lang.String" />
+		</operation>
+		
+		<operation name="setCongestionControlPolicyByName"
+			description="Sets the congestion control policy when SIP Messages comes in and the container is overloaded"
+			impact="ACTION" returnType="void">
+			<parameter name="congestionControlPolicy"
+				description="the congestion control policy,must be one of the following - DropMessage, ErrorResponse"
+				type="java.lang.String" />
+		</operation>		
+		
+		<operation name="init"
+			description="Initialize the sip application dispatcher and its associated sip application router implementation"
+			impact="ACTION" returnType="void">		
+		</operation>
+
+		<operation name="start" description="Start" impact="ACTION"
+			returnType="void" />
+
+		<operation name="stop" description="Stop" impact="ACTION"
+			returnType="void" />
+
+		<operation name="getSipFactory"
+			description="retrieve the sip factory used by this application dispatcher"
+			impact="ACTION" returnType="javax.servlet.sip.SipFactory" />
+			
+		<operation name="getResponsesProcessedByStatusCode"
+			description="get the number of responses processed for a specific response status code range given in param"
+			impact="ACTION" returnType="long">
+			<parameter name="statusCode"
+				description="the status code range (1XX or 2XX or 3XX etc up to 9XX) to query for getting the corresponding number of responses processed"
+				type="java.lang.String" />
+		</operation>
+		
+		<operation name="getRequestsProcessedByMethod"
+			description="get the number of requests processed for a specific SIP method given in param"
+			impact="ACTION" returnType="long">
+			<parameter name="method"
+				description="the SIP method to query for getting the corresponding number of requests processed"
+				type="java.lang.String" />
+		</operation>
+	</mbean-->
+
+</mbeans-descriptors>

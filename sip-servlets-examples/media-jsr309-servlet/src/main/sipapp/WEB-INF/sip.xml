@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sip-app>
+	<app-name>
+		org.mobicents.servlet.sip.example.MediaJSR309Application
+	</app-name>
+	<display-name>MediaJSR309Application</display-name>
+	<description>MediaJSR309Application</description>
+
+	<servlet-selection>
+		<servlet-mapping>
+			<servlet-name>PromptAndCollectServlet</servlet-name>
+			<pattern>
+				<and>
+					<equal>
+						<var>request.method</var>
+						<value>INVITE</value>
+					</equal>
+					<equal>
+						<var>request.uri.user</var>
+						<value>1010</value>
+					</equal>
+				</and>
+			</pattern>
+		</servlet-mapping>
+
+		<servlet-mapping>
+			<servlet-name>PromptAndRecordServlet</servlet-name>
+			<pattern>
+				<and>
+					<equal>
+						<var>request.method</var>
+						<value>INVITE</value>
+					</equal>
+					<equal>
+						<var>request.uri.user</var>
+						<value>1011</value>
+					</equal>
+				</and>
+			</pattern>
+		</servlet-mapping>
+
+	</servlet-selection>
+
+	<servlet>
+		<servlet-name>PromptAndCollectServlet</servlet-name>
+		<display-name>PromptAndCollectServlet</display-name>
+		<description>PromptAndCollectServlet</description>
+		<servlet-class>
+			org.mobicents.servlet.sip.example.PromptAndCollectServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>PromptAndRecordServlet</servlet-name>
+		<display-name>PromptAndRecordServlet</display-name>
+		<description>PromptAndRecordServlet</description>
+		<servlet-class>
+			org.mobicents.servlet.sip.example.PromptAndRecordServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<listener>
+		<listener-class>
+			org.mobicents.servlet.sip.example.PromptAndRecordServlet
+		</listener-class>		
+	</listener>
+	
+	<listener>
+		<listener-class>
+			org.mobicents.servlet.sip.example.PlayerServlet
+		</listener-class>		
+	</listener>
+</sip-app>

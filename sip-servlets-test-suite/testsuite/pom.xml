@@ -1,0 +1,265 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.mobicents.servlet.sip.testsuite</groupId>
+		<artifactId>sip-servlets-test-suite-parent</artifactId>
+		<version>3.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>sip-servlets-test-suite</artifactId>
+	<packaging>jar</packaging>
+	<name>Mobicents Sip Servlets Test Suite</name>
+	<dependencies>
+		<!-- testing dependency -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.8.5</version>
+			<scope>test</scope>
+		</dependency>	
+		
+		<dependency>
+			<groupId>org.mobicents.servlet.sip</groupId>
+			<artifactId>sip-servlets-spec</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mobicents.servlet.sip</groupId>
+			<artifactId>sip-servlets-core-api</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mobicents.servlet.sip.containers</groupId>
+			<artifactId>sip-servlets-catalina-7</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mobicents.servlet.sip</groupId>
+			<artifactId>sip-servlets-impl</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mobicents.servlet.sip</groupId>
+			<artifactId>sip-servlets-application-router</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mobicents.servlet.sip.containers</groupId>
+			<artifactId>sip-servlets-tomcat-7</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<!-- j2ee dependencies -->
+		<dependency>
+			<groupId>geronimo-spec</groupId>
+			<artifactId>geronimo-spec-j2ee-jacc</artifactId>
+			<version>1.0-rc4</version>
+		</dependency>
+		
+		<!-- logging dependency -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging-api</artifactId>
+			<version>${commons-logging.version}</version>
+			<scope>provided</scope>
+		</dependency>	
+
+		<!-- JAIN-SIP dependency for the shootist -->
+		<dependency>
+			<groupId>javax.sip</groupId>
+			<artifactId>jain-sip-api</artifactId>
+			<version>${jain-sip-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.sip</groupId>
+			<artifactId>jain-sip-ri</artifactId>
+			<version>${jain-sip-ri.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>concurrent</groupId>
+			<artifactId>concurrent</artifactId>
+			<version>${concurrent.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.dnsjava</groupId>
+			<artifactId>dnsjava</artifactId>
+			<version>2.0.6</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.java.stun4j</groupId>
+			<artifactId>stun4j</artifactId>
+			<version>1.0.MOBICENTS</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- javax.mail deps for multipart support -->
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- Tomcat dependencies -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina</artifactId>
+			<version>${tomcat-7.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-coyote</artifactId>
+			<version>${tomcat-7.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jasper</artifactId>
+			<version>${tomcat-7.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jsp-api</artifactId>
+			<version>${tomcat-7.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+	<!--  Introduced because of https://issues.apache.org/bugzilla/show_bug.cgi?id=50604, should be removed when we move away from Tomcat's version 6.0.32 -->
+		<!--dependency>
+			<groupId>org.eclipse.jdt.core.compiler</groupId>
+			<artifactId>ecj</artifactId>
+			<version>3.5.1</version>
+			<scope>provided</scope>
+		</dependency-->
+		
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.cafesip.sipunit</groupId>
+			<artifactId>sipunit</artifactId>
+			<version>2.0.0</version>
+			<optional>true</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mobicents.tools</groupId>
+			<artifactId>sip-balancer-jar</artifactId>
+			<version>${mobicents.balancer.version}</version>
+		</dependency>
+		
+		<dependency>			
+			<groupId>org.mobicents.ha.javax.sip</groupId>
+			<artifactId>mobicents-jain-sip-ha-core</artifactId>
+			<version>${mobicents.jain.sip.ha.version}</version>				
+		</dependency>
+		
+		<dependency>			
+			<groupId>org.mobicents.javax.sip</groupId>
+			<artifactId>mobicents-jain-sip-ext</artifactId>
+			<version>${mobicents.jain.sip.ext.version}</version>				
+		</dependency>
+		
+		<dependency>
+			<groupId>dnsjava</groupId>
+			<artifactId>dnsjava</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		
+		<dependency>			
+			<groupId>org.mobicents.ha.javax.sip</groupId>
+			<artifactId>mobicents-jain-sip-jboss4</artifactId>
+			<version>${mobicents.jain.sip.ha.version}</version>				
+		</dependency>
+		
+		<!-- clustering deps -->
+		<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jboss-cache</artifactId>
+			<version>1.4.1.SP5</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>jgroups</groupId>
+			<artifactId>jgroups</artifactId>
+			<version>2.4.1</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>jta</artifactId>
+			<version>1.0.1B</version>
+			<scope>test</scope>
+		</dependency>	
+		
+		<dependency>
+		    <groupId>nl.jqno.equalsverifier</groupId>
+		    <artifactId>equalsverifier</artifactId>
+		    <version>1.0.1</version>		    
+		  </dependency>	
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.10</version>
+				<configuration>					
+					<forkMode>always</forkMode>
+					<excludes>
+						<exclude>**/TestSipListener.java</exclude>
+					</excludes>
+					<argLine>-Dorg.mobicents.testsuite.testhostaddr=${org.mobicents.testsuite.testhostaddr} -XX:MaxPermSize=256m -Xms1024m -Xmx1024m</argLine>       				          				
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<repositories>
+		<repository>
+		    <id>equalsverifier-repository</id>
+		    <url>http://equalsverifier.googlecode.com/svn/maven/</url>
+		  </repository>
+  </repositories>
+</project>

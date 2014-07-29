@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sip-app>
+	<app-name>org.mobicents.servlet.sip.example.DistributableSimpleApplication</app-name>
+	<display-name>Distributable Simple Sip Servlet</display-name>
+	<description>Distributable Simple Sip Servlet</description>
+	<distributable/>
+	
+	<session-config>
+		<session-timeout>3</session-timeout>
+	</session-config>
+	
+	<servlet-selection>
+		<main-servlet>
+			DistributableSimpleSipServlet
+		</main-servlet>
+	</servlet-selection>
+
+	<servlet>
+		<servlet-name>DistributableSimpleSipServlet</servlet-name>
+		<display-name>DistributableSimpleSipServlet</display-name>
+		<description>Distributable Simple SIP servlet</description>
+		<servlet-class>
+			org.mobicents.servlet.sip.example.DistributableSimpleSipServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<context-param>
+      <param-name>bye.delay</param-name>
+      <param-value>60000</param-value>
+    </context-param>
+    
+    <listener>
+		<listener-class>
+			org.mobicents.servlet.sip.example.DistributableSimpleSipServlet
+		</listener-class>
+	</listener>
+	<listener>
+		<listener-class>
+			org.mobicents.servlet.sip.example.SipApplicationSessionActivationListenerAttribute
+		</listener-class>
+	</listener>
+	<listener>
+		<listener-class>
+			org.mobicents.servlet.sip.example.SipSessionActivationListenerAttribute
+		</listener-class>
+	</listener>
+</sip-app>

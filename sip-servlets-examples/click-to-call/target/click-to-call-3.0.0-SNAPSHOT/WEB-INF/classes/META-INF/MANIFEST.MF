@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Export-Package: org.mobicents.servlet.sip.example;uses:="javax.servlet
+ .sip,javax.servlet,javax.naming,org.apache.log4j,javax.servlet.http"
+Implementation-Title: org.mobicents.servlet.sip.examples:click-to-call
+Implementation-Version: 3.0.0-SNAPSHOT
+Built-By: stevesui
+Tool: Bnd-1.15.0
+Bundle-Name: Click To Call
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.mobicents.org
+Implementation-Vendor-Id: TeleStax, Inc.
+Build-Jdk: 1.7.0_60-ea
+Bundle-Version: 3.0.0.SNAPSHOT
+Bnd-LastModified: 1389114439496
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.gnu.org/licenses/lgpl.html
+Bundle-Description: Mobicents SIP Servlets
+Import-Package: javax.naming,javax.servlet,javax.servlet.http,javax.se
+ rvlet.sip,org.apache.log4j;version="[1.2,2)"
+Bundle-SymbolicName: org.mobicents.servlet.sip.examples.click-to-call
+

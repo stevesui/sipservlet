@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.mobicents.servlet.sip.testsuite.applications</groupId>
+		<artifactId>sip-servlets-test-suite-applications</artifactId>
+		<version>3.0.0-SNAPSHOT</version>
+	</parent>
+    <artifactId>click-to-call-servlet</artifactId>
+    <packaging>war</packaging>
+    <name>Click To Call</name>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webXml>${basedir}/src/main/sipapp/WEB-INF/web.xml</webXml>
+                    <warSourceDirectory>${basedir}/src/main/sipapp</warSourceDirectory>
+                    <webResources>
+                        <resource>
+                            <directory>${basedir}/src/main/sipapp/WEB-INF</directory>
+                            <!-- override the destination directory for this resource -->
+                            <targetPath>WEB-INF</targetPath>
+                            <filtering>false</filtering>
+                            <includes>
+                                <exclude>sip.xml</exclude>
+                            </includes>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
