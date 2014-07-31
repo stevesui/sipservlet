@@ -48,7 +48,7 @@ import com.rabbitmq.client.Channel;
 //Add a comment here to show the commit work in GIT. --Steve Sui July 29,2013
 
 
-public class SimpleSipServlet extends SipServlet implements TimerListener {
+//public class SimpleSipServlet extends SipServlet implements TimerListener {
 	private static Logger logger = Logger.getLogger(SimpleSipServlet.class);
 	private static final long serialVersionUID = 1L;
 	private static final String CALLEE_SEND_BYE = "YouSendBye";
